@@ -1,6 +1,7 @@
 import React from "react";
 import skin1 from "../../assets/images/skin-1.jpeg";
 import skin2 from "../../assets/images/skin-2.jpeg"; 
+import { Link } from "react-router-dom";
 
 const products = [
   { label: "Moisturizer", image: skin1 },
@@ -14,9 +15,9 @@ const ShopByProduct = () => {
 
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-base font-bold text-gray-900">Shop by Product</h2>
-        <a href="#" className="text-xs font-medium text-pink-500 hover:text-pink-600 transition-colors">
+        <Link to="/products" className="text-xs font-medium text-pink-500 hover:text-pink-600 transition-colors">
           View more
-        </a>
+        </Link>
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
