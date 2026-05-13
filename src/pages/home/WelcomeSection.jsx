@@ -29,45 +29,49 @@ const WelcomeSection = () => {
                 Welcome to Roopsee.
             </h2>
 
-            <Swiper
-                modules={[Autoplay, Pagination]}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                pagination={{ clickable: true }}
-                loop={true}
-                className="rounded-xl w-full"
-                style={{
-                    "--swiper-pagination-color": "#d946a8",
-                    "--swiper-pagination-bullet-inactive-color": "#ddd",
-                    "--swiper-pagination-bullet-inactive-opacity": 1,
-                    "--swiper-pagination-bullet-size": "7px",
-                    "--swiper-pagination-bullet-horizontal-gap": "4px",
-                }}
-            >
-                {slides.map((slide, i) => (
-                    <SwiperSlide key={i}>
-                        <div
-                            className="
+            <div style={{ position: "relative", zIndex: 0 }}>
+                <Swiper
+                    modules={[Autoplay, Pagination]}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    className="rounded-xl w-full"
+                    style={{
+                        zIndex: 0,
+                        "--swiper-pagination-color": "#d946a8",
+                        "--swiper-pagination-bullet-inactive-color": "#ddd",
+                        "--swiper-pagination-bullet-inactive-opacity": 1,
+                        "--swiper-pagination-bullet-size": "7px",
+                        "--swiper-pagination-bullet-horizontal-gap": "4px",
+                    }}
+                >
+                    {slides.map((slide, i) => (
+                        <SwiperSlide key={i}>
+                            <div
+                                className="
                 h-48 sm:h-56 md:h-64 lg:h-80 xl:h-96
                 flex items-end justify-end
                 p-4 sm:p-6 md:p-8
                 rounded-xl relative overflow-hidden
               "
-                            style={{ backgroundColor: slide.bg }}
-                        >
-                            <div className="absolute top-[-40px] left-[-40px] w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-white opacity-5" />
+                                style={{ backgroundColor: slide.bg }}
+                            >
+                                <div className="absolute top-[-40px] left-[-40px] w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-white opacity-5" />
 
-                            <div className="bg-white rounded-lg px-3 py-2 sm:px-4 sm:py-3 text-right z-10">
-                                <p className="text-xs sm:text-sm font-bold uppercase tracking-wide text-pink-700">
-                                    {slide.label}
-                                </p>
-                                <p className="text-sm sm:text-base md:text-lg font-extrabold text-gray-900">
-                                    {slide.title}
-                                </p>
+                                <div className="bg-white rounded-lg px-3 py-2 sm:px-4 sm:py-3 text-right z-10">
+                                    <p className="text-xs sm:text-sm font-bold uppercase tracking-wide text-pink-700">
+                                        {slide.label}
+                                    </p>
+                                    <p className="text-sm sm:text-base md:text-lg font-extrabold text-gray-900">
+                                        {slide.title}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+
 
         </div>
     );

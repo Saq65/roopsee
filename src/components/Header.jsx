@@ -3,7 +3,7 @@ import { ShoppingBag, Menu } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-3.5 bg-white border-b border-gray-100">
+    <header className="flex items-center justify-between px-4 sticky top-0 z-50 sm:px-6 md:px-8 py-3 sm:py-3.5 bg-white border-b border-gray-100">
       
       <div className="font-extrabold text-xl sm:text-2xl tracking-tight">
         roopsee<span className="text-pink-500">.</span>

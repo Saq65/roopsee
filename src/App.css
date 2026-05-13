@@ -8,3 +8,8 @@
   box-sizing: border-box;
   scrollbar-width: smooth;
 }
+
+.swiper {
+  position: relative;
+  z-index: 0 !important;
+}
